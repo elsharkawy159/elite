@@ -17,7 +17,7 @@ export const Projects = () => {
       }, []);
   return (
     <>
-      <section className="container-fluid py-100">
+      <section className="container-fluid position-relative bg1 py-100">
         <div className="mb-5">
           <h1 className="title text-center text-gradient">مشاريعنـا</h1>
           <p className="text-center opacity-75">
@@ -56,7 +56,6 @@ export const Projects = () => {
             </a>
           </li>
         </ul>
-
         <div className="tab-content" id="ex1-content">
           <div
             className="tab-pane fade show active"
@@ -64,7 +63,7 @@ export const Projects = () => {
             role="tabpanel"
             aria-labelledby="ex1-tab-1"
           >
-            <div className="row bg1 gy-3 justify-content-center">
+            <div className="row gy-3 justify-content-center">
               {interiorProjects.map((project) => {
                 return (
                   <div ref={reveal} className={`col-md-3`} key={project.id}>
@@ -112,6 +111,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
+<div className="dark_overlay"></div>
       </section>
     </>
   );

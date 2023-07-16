@@ -175,13 +175,15 @@ a {
 }
 
 .bg1 {
-  background-image: url("/bg1.jpg");
+  background-image: url("/bg.jpg");
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
+
 
 
 
