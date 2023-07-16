@@ -1,0 +1,8 @@
+.footer {
+    background-color: #252531 !important;
+    width: calc(100% - 50px);
+    margin-left: 25px;
+    margin-bottom: 25px;
+    color: #fff;
+    padding: 100px 0;
+}

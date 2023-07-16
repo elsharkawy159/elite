@@ -1,0 +1,27 @@
+@media screen and (max-width: 765px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button {
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto !important;
+}
+.navbar-toggler {
+    display: block !important;
+    justify-content: left !important;
+    margin: 0px 0px!important;
+}
+}

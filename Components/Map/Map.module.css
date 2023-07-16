@@ -1,0 +1,13 @@
+.form {
+  top: 50%;
+  left: 75%;
+  width: 30rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .form {
+    top: 50%;
+    left: 50%;
+    width: 20rem;
+  }
+}
