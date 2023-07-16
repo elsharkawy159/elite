@@ -64,7 +64,7 @@ export const Projects = () => {
             role="tabpanel"
             aria-labelledby="ex1-tab-1"
           >
-            <div className="row gy-3 justify-content-center">
+            <div className="row bg1 gy-3 justify-content-center">
               {interiorProjects.map((project) => {
                 return (
                   <div ref={reveal} className={`col-md-3`} key={project.id}>
