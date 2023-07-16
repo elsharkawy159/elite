@@ -48,6 +48,13 @@ export const interiorProjects = [
     designer: "أحمد محمد",
     images: ["/6.jpg", "/3.jpg", "/7.jpg", "/8.jpg"],
   },
+  {
+    id: 8,
+    title: "فيلا",
+    description: "وصف لتصميم معماري",
+    designer: "أحمد محمد",
+    images: ["/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg"],
+  },
 ];
 
 export const outroProjects = [
@@ -99,5 +106,12 @@ export const outroProjects = [
     description: "وصف لتصميم معماري",
     designer: "أحمد محمد",
     images: ["/6.jpg", "/3.jpg", "/7.jpg", "/8.jpg"],
+  },
+  {
+    id: 8,
+    title: "فيلا",
+    description: "وصف لتصميم معماري",
+    designer: "أحمد محمد",
+    images: ["/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg"],
   },
 ];
