@@ -17,7 +17,7 @@ export const Projects = () => {
       }, []);
   return (
     <>
-      <section className="container py-100">
+      <section className="container-fluid py-100">
         <div className="mb-5">
           <h1 className="title text-center text-gradient">مشاريعنـا</h1>
           <p className="text-center opacity-75">
@@ -67,7 +67,7 @@ export const Projects = () => {
             <div className="row gy-3 justify-content-center">
               {interiorProjects.map((project) => {
                 return (
-                  <div ref={reveal} className={`col-md-4`} key={project.id}>
+                  <div ref={reveal} className={`col-md-3`} key={project.id}>
                     <Link href={`projects/${project.id}`}>
                       <div className={style.snip1295}>
                         <Image
