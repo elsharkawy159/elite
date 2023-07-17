@@ -5,19 +5,19 @@ import Link from "next/link.js";
 import { interiorProjects } from "../../data/projects.js";
 
 export const Projects = () => {
-      const reveal = React.useRef(null);
-      useEffect(() => {
-        async function animate() {
-          if (reveal.current) {
-            const sr = (await import("scrollreveal")).default;
-            sr().reveal(reveal.current, { delay: 100 });
-          }
-        }
-        animate();
-      }, []);
+  const reveal = React.useRef(null);
+  useEffect(() => {
+    async function animate() {
+      if (reveal.current) {
+        const sr = (await import("scrollreveal")).default;
+        sr().reveal(reveal.current, { delay: 100 });
+      }
+    }
+    animate();
+  }, []);
   return (
     <>
-      <section className="container-fluid position-relative bg1 py-100">
+      <section className="container-fluid position-relative py-100">
         <div className="mb-5">
           <h1 className="title text-center text-gradient">مشاريعنـا</h1>
           <p className="text-center opacity-75">
@@ -111,7 +111,7 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-<div className="dark_overlay"></div>
+        {/* <div className="dark_overlay"></div> */}
       </section>
     </>
   );
