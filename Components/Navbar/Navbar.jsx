@@ -28,7 +28,6 @@ const Navbar = () => {
             className={`${liClasses} d-flex flex-column navbar-brand fw-bold fs-5 m-0 mb-1 p-0 opacity-100`}
           >
             <img src="/final-logo.png" alt="" width={100} className="m-auto" />
-            <span className="text-sm m-0">للإستشارات الهندسية</span>
           </Link>
           <button
             className="navbar-toggler"

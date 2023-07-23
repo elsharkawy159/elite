@@ -4,6 +4,7 @@ import { About } from "../Components/About/About.jsx";
 import { Services } from "../Components/Services/Services.jsx";
 import { Projects } from "../Components/Projects/Projects.jsx";
 import { Map } from "../Components/Map/Map.jsx";
+import { VideoBanner } from "../Components/VideoBanner/VideoBanner.jsx";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <MainLanding />
       <About />
+      <VideoBanner/>
       <Services />
       <Projects />
       <Map />
