@@ -1,7 +1,6 @@
 .video_banner_bg {
   position: relative;
   height: 400px;
-  margin-bottom: 50px;
 }
 
 .overlay {
@@ -15,10 +14,11 @@
 
 .bgImage {
   background-color: #5f5f5f6e;
-  background-image: url("/1.jpg");
+  background-image: url("/videobg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .btn_video {
