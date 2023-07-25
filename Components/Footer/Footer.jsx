@@ -1,9 +1,12 @@
 import React from "react";
 import style from "./Footer.module.css";
+import Link from "next/link.js";
 
 export const Footer = () => {
   return (
-    <footer className={`${style.footer} rounded-1 text-center m-auto mb-4 mt-5`}>
+    <footer
+      className={`${style.footer} rounded-1 text-center m-auto mb-4 mt-5`}
+    >
       <section>
         <div className="container text-center">
           <div className="row">
@@ -35,13 +38,8 @@ export const Footer = () => {
               </section>
             </div>
 
-            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  Angular
-                </a>
-              </p>
+            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light">
+              <h6 className="text-uppercase fw-bold mb-4 ">Products</h6>
               <p>
                 <a href="#!" className="text-reset">
                   React
@@ -60,12 +58,11 @@ export const Footer = () => {
             </div>
 
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  Pricing
-                </a>
-              </p>
+              <h6 className="text-uppercase fw-bold mb-4">عن النخبة</h6>
+
+                <Link href="/about" className="text-reset mb-5">
+                  من نحن
+                </Link>
               <p>
                 <a href="#!" className="text-reset">
                   Settings

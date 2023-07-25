@@ -60,6 +60,10 @@ a {
   color: var(--dark-color) !important;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.2s all ease;
+}
+a:hover {
+  color: var(--main-color) !important;
 }
 .text-sm {
   font-size: 14px;
