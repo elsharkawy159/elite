@@ -1,14 +1,11 @@
-.icon {
-    transition: 0.2s all ease;
-}
-.service:hover .icon {
-    color: var(--main-color);
-}
 
-.service {
-    transition: 0.2s all ease;
+.service, .service div p {
+    transition: 0.4s all ease;
 
 }
 .service:hover{
-    background-color: rgb(247, 247, 247);
+    background-color: rgba(232, 232, 232, 0.4);
+}
+.service:hover div p{
+    color: rgb(23, 23, 23);
 }

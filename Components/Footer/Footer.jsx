@@ -11,102 +11,104 @@ export const Footer = () => {
         <div className="container text-center">
           <div className="row">
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 className="fw-bold mb-4 fs-4 text-main">
-                <i className="fas fa-gem me-3 mx-2 text-main"></i>النخبه
+              <h6 className="fw-bold mb-4 fs-4">
+                <i className="fas fa-gem ms-3 text-main"></i>النخبه
               </h6>
+              <h6 className="text-uppercase fw-bold mt-5 mb-4">تابعنا على</h6>
               <section className="d-flex justify-content-center">
-                <div className="d-flex">
-                  <a href="" className="me-4 fs-4 link-secondary">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="" className="me-4 fs-4 link-secondary">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                  <a href="" className="me-4 fs-4 link-secondary">
-                    <i className="fab fa-google"></i>
-                  </a>
-                  <a href="" className="me-4 fs-4 link-secondary">
+                <div className="d-flex justify-content-evenly w-100">
+                  <Link
+                    href="https://www.tiktok.com/@eli_0te"
+                    className="fs-4 text-light opacity-90"
+                    target="_blank"
+                  >
+                    <i className="fa-brands fa-tiktok"></i>
+                  </Link>
+                  <Link
+                    href="https://www.instagram.com/eli_0te/"
+                    className="fs-4 text-light opacity-90"
+                    target="_blank"
+                  >
                     <i className="fab fa-instagram"></i>
-                  </a>
-                  <a href="" className="me-4 fs-4 link-secondary">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                  <a href="" className="me-4 fs-4 link-secondary">
-                    <i className="fab fa-github"></i>
-                  </a>
+                  </Link>
+                  <Link
+                    href=""
+                    className="fs-4 text-light opacity-90"
+                    target="_blank"
+                  >
+                    <i className="fab fa-twitter"></i>
+                  </Link>
+
+                  <Link
+                    href=""
+                    className="fs-4 text-light opacity-90"
+                    target="_blank"
+                  >
+                    <i className="fab fa-snapchat"></i>
+                  </Link>
                 </div>
               </section>
             </div>
 
-            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-light">
-              <h6 className="text-uppercase fw-bold mb-4 ">Products</h6>
-              <p>
-                <a href="#!" className="text-reset">
-                  React
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
-                  Laravel
-                </a>
-              </p>
-            </div>
-
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">عن النخبة</h6>
-
-                <Link href="/about" className="text-reset mb-5">
+              <h6 className="text-uppercase fw-bold mb-4">روابط مفيدة</h6>
+              <p>
+                <Link href="/about" className="text-light opacity-90">
                   من نحن
                 </Link>
-              <p>
-                <a href="#!" className="text-reset">
-                  Settings
-                </a>
               </p>
               <p>
-                <a href="#!" className="text-reset">
-                  Orders
-                </a>
+                <Link href="/about" className="text-light opacity-90">
+                  الخدمات
+                </Link>
               </p>
               <p>
-                <a href="#!" className="text-reset">
-                  Help
-                </a>
+                <Link href="/about" className="text-light opacity-90">
+                  أعمالنا
+                </Link>
+              </p>
+              <p>
+                <Link href="/about" className="text-light opacity-90">
+                  تواصل معنا
+                </Link>
               </p>
             </div>
 
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+              <h6 className="text-uppercase fw-bold mb-4">تواصل معنا</h6>
               <p>
-                <i className="fas fa-home me-3 text-secondary"></i> New York, NY
-                10012, US
+                <Link href={"/"} className="text-light">
+                  <i className="fas fa-home ms-3"></i>
+                  قتيبة بن مسلم - البلدية - حفر الباطن
+                </Link>
               </p>
               <p>
-                <i className="fas fa-envelope me-3 text-secondary"></i>
-                info@example.com
+                <Link href={"/"} className="text-light">
+                  <i className="fas fa-envelope ms-3"></i>
+                  info@example.com
+                </Link>
               </p>
               <p>
-                <i className="fas fa-phone me-3 text-secondary"></i> + 01 234
-                567 88
-              </p>
-              <p>
-                <i className="fas fa-print me-3 text-secondary"></i> + 01 234
-                567 89
+                <Link href={"/"} className="text-light">
+                  <i className="fas fa-phone ms-3"></i>
+                  0123123123
+                </Link>
               </p>
             </div>
           </div>
         </div>
       </section>
-      <div className="text-center p-4">
-        © 2021 Copyright:
-        <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
+      <div className="text-center pt-3">
+        حقوق النشر © 2023
+        <span className="text-main"> النخبه للإستثمارات الهندسية، </span>
+        جميع الحقوق محفوظة، تم التطوير من قبل{" "}
+        <Link
+          href={"https://www.linkedin.com/in/omar-m-abdelhamid-b78151195/"}
+          target="_blank"
+          className="text-light opacity-70"
+        >
+          م/عمر محمد
+        </Link>
       </div>
     </footer>
   );

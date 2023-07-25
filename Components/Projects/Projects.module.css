@@ -21,6 +21,21 @@
   position: absolute;
   opacity: 0.45;
 }
+.snip1295 h1 {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  width: calc(100% - 60px);
+  transform: translate(-50%, 0%);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2.5px);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
 .snip1295 .border:before,
 .snip1295 .border:after,
 .snip1295 .border div:before,

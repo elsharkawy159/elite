@@ -68,7 +68,9 @@ a:hover {
 .text-sm {
   font-size: 14px;
 }
-
+.text-main {
+  color: var(--main-color);
+}
 .navbar {
   --mdb-navbar-box-shadow: 0 0 0 0 !important;
 }

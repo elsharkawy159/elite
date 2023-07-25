@@ -76,6 +76,7 @@ export const Projects = () => {
                           height={230}
                           className="w-100 h-100"
                         />
+                        <h1>{project.title}</h1>
                         <div className={`${style.border} ${style.one}`}>
                           <div></div>
                         </div>

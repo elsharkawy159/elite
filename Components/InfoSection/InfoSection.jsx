@@ -3,6 +3,7 @@ import style from "./InfoSection.module.css";
 import Image from "next/image.js";
 
 export const InfoSection = ({
+  key,
   title,
   description,
   imageURL,
@@ -26,7 +27,7 @@ export const InfoSection = ({
   }, []);
   return (
     <>
-      <section ref={reveal} className="container py-5">
+      <section id={title} ref={reveal} className="container py-5">
         <div
           className={`row align-items-center ${
             dir ? "flex-row-reverse" : null
