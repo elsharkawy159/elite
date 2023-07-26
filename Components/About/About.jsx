@@ -41,7 +41,13 @@ export const About = () => {
             </Link>
           </div>
           <div className="col-md-6 position-relative img_border">
-            <Image src="/about.jpg" width={1280} height={720} className="w-100 h-100" alt="" />
+            <Image
+              src="/aboutSection.jpg"
+              width={1280}
+              height={720}
+              className="img-fluid"
+              alt="About"
+            />
           </div>
         </div>
       </section>
