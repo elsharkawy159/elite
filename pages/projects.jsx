@@ -30,7 +30,7 @@ function projects() {
         current={"أعمالنا"}
       />
       <div className="container py-100">
-        <div ref={reveal} className="row gy-3 justify-content-center">
+        <div ref={reveal} className="row shadow-sm rounded-3 py-4 gy-3 justify-content-center">
           {interiorProjects.map((project) => {
             return (
               <div ref={reveal} className={`col-md-3`} key={project.id}>

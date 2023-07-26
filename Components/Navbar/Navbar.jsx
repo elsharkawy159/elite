@@ -6,22 +6,22 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 1);
+    const handleScroll = () => setIsScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navbarClasses = `${styles.navbar} navbar navbar-expand-lg py-1 px-0 ${
-    isScrolled ? "bg-light shadow fixed-top" : "bg-transparent fixed-top"
+  const navbar = `${styles.navbar} navbar navbar-expand-lg fixed-top px-0 ${
+    isScrolled ? "bg-light shadow-sm" : "py-3 bg-transparent"
   }`;
 
   const liClasses = `${styles.nav_link} ${
-    isScrolled ? "text-dark" : "text-light py-3"
+    isScrolled ? "text-dark" : "text-light"
   }`;
 
   return (
     <header>
-      <nav className={navbarClasses}>
+      <nav className={navbar}>
         <div className="container px-4">
           <Link
             href="/"

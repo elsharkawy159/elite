@@ -421,16 +421,9 @@ a:hover {
 
 
 
-
-.gallery-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 5px;
-  height: fit-content;
-  justify-content: center;
-}
-
-.gallery-item {
-  width: 100%;
-  height: fit-content;
-}
+  @media screen and (min-width: 500) {
+      .navbar, .nav_link {
+        background-color: black !important;
+        height: 100px;
+  }
+  }

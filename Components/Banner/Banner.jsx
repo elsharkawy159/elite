@@ -8,7 +8,7 @@ export const Banner = ({ title, description, prev, current, imageURL }) => {
       <section
         className={`container-fluid  ${style.banner}`}
         style={{
-          backgroundImage: imageURL ? `url(${imageURL})` : `url('/6.jpg')`,
+          backgroundImage: imageURL ? `url(${imageURL})` : `url('/videobg.jpg')`,
         }}
       >
         <div className="row dark_overlay align-content-center p-0 m-0">

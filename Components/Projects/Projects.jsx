@@ -110,8 +110,8 @@ export const Projects = () => {
                         <Image
                           src={project.images[0]}
                           alt={project.title}
-                          width={400}
-                          height={230}
+                          width={1200}
+                          height={630}
                           className="w-100 h-100"
                         />
                         <div className={"title"}>

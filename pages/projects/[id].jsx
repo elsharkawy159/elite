@@ -1,18 +1,24 @@
-import style from "../../styles/project.module.css";
 import { useRouter } from "next/router";
 import { Banner } from "../../Components/Banner/Banner.jsx";
-import { interiorProjects } from "../../data/projects.js";
-import React, { useEffect } from "react";
+import { interiorProjects, outroProjects } from "../../data/projects.js";
+import React, { lazy, useEffect } from "react";
 import Image from "next/image.js";
 
 export default function Project() {
   const router = useRouter();
   const { id } = router.query;
 
-  const project = interiorProjects.find((p) => p.id === parseInt(id));
+  const allProjects = [...interiorProjects, ...outroProjects];
+  const project = allProjects.find((p) => p.id === parseInt(id));
 
   const reveal = React.useRef(null);
   useEffect(() => {
+    document.querySelectorAll(".image").forEach((img) => {
+      img.addEventListener("dragstart", (e) => {
+        e.preventDefault();
+      });
+    });
+
     async function animate() {
       if (reveal.current) {
         const sr = (await import("scrollreveal")).default;
@@ -20,17 +26,6 @@ export default function Project() {
       }
     }
     animate();
-    // Disable right-clicking on the entire page
-    // document.addEventListener("contextmenu", (e) => {
-    //   e.preventDefault();
-    // });
-
-    // Disable dragging on the photos
-    document.querySelectorAll(".image").forEach((img) => {
-      img.addEventListener("dragstart", (e) => {
-        e.preventDefault();
-      });
-    });
   }, []);
   return (
     <>
@@ -41,18 +36,22 @@ export default function Project() {
         current={project?.title}
         imageURL={project?.images[0]}
       />
-      <section className="container-fluid">
+      <section className="container">
         <h1 className="title text-gradient text-center py-100 m-0">
           معرض التصاميم
         </h1>
         <section>
-          <div ref={reveal} className="gallery-container">
+          <div
+            ref={reveal}
+            className="row gy-4 bg-light"
+          >
             {project?.images.map((image, index) => {
               return (
-                <div key={index} className="">
+                <div key={index} className="col-md-6">
                   <div className="bg-image hover-overlay ripple shadow-1-strong rounded">
                     <Image
                       src={image}
+                      loading="lazy"
                       alt={project.title}
                       width={1200}
                       height={630}
@@ -96,6 +95,7 @@ export default function Project() {
                     <div className="ratio ratio-16x9">
                       <Image
                         src={image}
+                        loading="lazy"
                         alt={project.title}
                         width={1920}
                         height={1080}
