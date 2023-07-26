@@ -20,22 +20,18 @@ export default function Project() {
       }
     }
     animate();
-  }, []);
-
-  useEffect(() => {
     // Disable right-clicking on the entire page
-    document.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
-    });
+    // document.addEventListener("contextmenu", (e) => {
+    //   e.preventDefault();
+    // });
 
     // Disable dragging on the photos
-    document.querySelectorAll(".gallery-item img").forEach((img) => {
+    document.querySelectorAll(".image").forEach((img) => {
       img.addEventListener("dragstart", (e) => {
         e.preventDefault();
       });
     });
   }, []);
-
   return (
     <>
       <Banner
@@ -53,14 +49,14 @@ export default function Project() {
           <div ref={reveal} className="gallery-container">
             {project?.images.map((image, index) => {
               return (
-                <div key={index} className="gallery-item">
+                <div key={index} className="">
                   <div className="bg-image hover-overlay ripple shadow-1-strong rounded">
-                    <img
+                    <Image
                       src={image}
                       alt={project.title}
-                      width={750}
-                      height={500}
-                      className="w-100 h-100"
+                      width={505}
+                      height={280}
+                      className="w-100 h-100 image"
                     />
                     <a
                       href="#!"
@@ -80,25 +76,31 @@ export default function Project() {
           {project?.images.map((image, index) => {
             return (
               <div
-                class="modal fade"
+                className="modal fade"
                 id={`Modal${index}`}
-                tabindex="-1"
+                tabIndex="-1"
                 aria-labelledby="exampleModal1Label"
                 aria-hidden="true"
               >
-                <div class="modal-dialog modal-fullscreen position-relative">
-                  <div class="modal-content">
-                    <div class="text-center position-absolute top-0 end-0 p-5 m-5 py-3 z-3">
+                <div className="modal-dialog modal-fullscreen position-relative">
+                  <div className="modal-content">
+                    <div className="text-center position-absolute top-0 end-0 p-5 m-5 py-3 z-3">
                       <button
                         type="button"
-                        class="btn btn-warning"
+                        className="btn btn-warning"
                         data-mdb-dismiss="modal"
                       >
                         إغلاق
                       </button>
                     </div>
-                    <div class="ratio ratio-16x9">
-                      <img src={image} class="w-100" />
+                    <div className="ratio ratio-16x9">
+                      <Image
+                        src={image}
+                        alt={project.title}
+                        width={1920}
+                        height={1080}
+                        className="w-100 h-100 image"
+                      />
                     </div>
                   </div>
                 </div>

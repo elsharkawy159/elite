@@ -24,16 +24,16 @@ const ServiceItem = ({ icon, title, image }) => {
   return (
     <div ref={reveal} className={`col-lg-3 col-md-4 col-sm-6`}>
       <Link href={`/services/#${title}`}>
-        <div class={`${style.service} card hvrShadow`}>
+        <div className={`${style.service} card hvrShadow`}>
           <Image
             src={image}
-            class="card-img-top w-100"
+            className="card-img-top w-100"
             alt={title}
             width={280}
             height={230}
           />
-          <div class="card-body">
-            <p class="card-text text-center fw-bold h5">{title}</p>
+          <div className="card-body">
+            <p className="card-text text-center fw-bold h5">{title}</p>
           </div>
         </div>
         {/* <div

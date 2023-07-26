@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
 import style from "./Map.module.css";
 export const Map = () => {
-const reveal = React.useRef(null);
+  const reveal = React.useRef(null);
 
-useEffect(() => {
-  async function animate() {
-    if (reveal.current) {
-      const sr = (await import("scrollreveal")).default;
-      sr().reveal(reveal.current, {
-        origin: "top",
-        distance: "-120px",
-        delay: 0,
-      });
+  useEffect(() => {
+    async function animate() {
+      if (reveal.current) {
+        const sr = (await import("scrollreveal")).default;
+        sr().reveal(reveal.current, {
+          origin: "top",
+          distance: "-120px",
+          delay: 0,
+        });
+      }
     }
-  }
-  animate();
-}, []);
+    animate();
+  }, []);
   return (
     <>
       <section ref={reveal} className="container-fluid p-0 position-relative">
@@ -28,42 +28,40 @@ useEffect(() => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div
-          className={`row ${style.form} position-absolute translate-middle`}
-        >
+        <div className={`row ${style.form} position-absolute translate-middle`}>
           <div className="col-md-12 bg-dark bg-opacity-25 rounded-3 p-5">
             <h3 className="title text-light my-4">تواصل معنا</h3>
             <form action="">
-              <div class="mb-3">
+              <div className="mb-3">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="name"
                   placeholder="الإسم"
                   maxLength={40}
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="email"
                   placeholder="البريد الإلكتروني"
                   maxLength={40}
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <input
                   type="tel"
-                  class="form-control"
+                  className="form-control"
                   id="phone"
                   placeholder="رقم الهاتف"
                   maxLength={15}
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="4"
                   maxLength={500}

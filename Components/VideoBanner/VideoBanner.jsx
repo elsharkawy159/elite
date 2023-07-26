@@ -9,40 +9,40 @@ export const VideoBanner = () => {
     >
       <section className="h-100">
         <section className="h-100 d-flex justify-content-center align-items-center">
-          <div class={`${style.btn_video} z-3`}>
+          <div className={`${style.btn_video} z-3`}>
             <i className="fa-solid fa-play"></i>
             <Link
               href="#!"
               data-mdb-toggle="modal"
               data-mdb-target="#exampleModal3"
             >
-              <div class="mask"></div>
+              <div className="mask"></div>
             </Link>
           </div>
         </section>
 
         <section>
           <div
-            class="modal fade"
+            className="modal fade"
             id="exampleModal3"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="exampleModal1Label"
             aria-hidden="true"
           >
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="ratio ratio-16x9">
+            <div className="modal-dialog modal-lg">
+              <div className="modal-content">
+                <div className="ratio ratio-16x9">
                   <iframe
                     src="https://www.youtube.com/embed/vj85VRD0Hzo"
                     title="YouTube video"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
 
-                <div class="text-center py-3">
+                <div className="text-center py-3">
                   <button
                     type="button"
-                    class="btn btn-warning"
+                    className="btn btn-warning"
                     data-mdb-dismiss="modal"
                   >
                     إغلاق

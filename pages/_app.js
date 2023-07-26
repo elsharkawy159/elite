@@ -3,12 +3,11 @@ import Script from "next/script";
 import Head from "next/head";
 import "../styles/globals.css";
 import "../styles/mediaQuery.css";
-import Layout from "@/Layout/Layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "mdb-ui-kit/css/mdb.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "react-image-lightbox/style.css";
+import Layout from "../Layout/Layout.js";
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {

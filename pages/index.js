@@ -20,9 +20,9 @@ export default function Home() {
       </Head>
       <MainLanding />
       <About />
-      <VideoBanner/>
       <Services />
       <Projects />
+      <VideoBanner/>
       <Map />
     </>
   );
