@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "mdb-ui-kit/css/mdb.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "react-image-lightbox/style.css";
 
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {

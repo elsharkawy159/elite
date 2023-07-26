@@ -391,3 +391,21 @@ a:hover {
 .snip1295.hover .border div:after {
   height: 100%;
 }
+
+
+
+
+
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 8px;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+}

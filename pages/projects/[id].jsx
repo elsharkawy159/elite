@@ -3,23 +3,38 @@ import { useRouter } from "next/router";
 import { Banner } from "../../Components/Banner/Banner.jsx";
 import { interiorProjects } from "../../data/projects.js";
 import React, { useEffect } from "react";
-export default function Project() {
+import Image from "next/image.js";
 
+export default function Project() {
   const router = useRouter();
   const { id } = router.query;
 
   const project = interiorProjects.find((p) => p.id === parseInt(id));
 
-        const reveal = React.useRef(null);
-        useEffect(() => {
-          async function animate() {
-            if (reveal.current) {
-              const sr = (await import("scrollreveal")).default;
-              sr().reveal(reveal.current, { delay: 0 });
-            }
-          }
-          animate();
-        }, []);
+  const reveal = React.useRef(null);
+  useEffect(() => {
+    async function animate() {
+      if (reveal.current) {
+        const sr = (await import("scrollreveal")).default;
+        sr().reveal(reveal.current, { delay: 0 });
+      }
+    }
+    animate();
+  }, []);
+
+  useEffect(() => {
+    // Disable right-clicking on the entire page
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+
+    // Disable dragging on the photos
+    document.querySelectorAll(".gallery-item img").forEach((img) => {
+      img.addEventListener("dragstart", (e) => {
+        e.preventDefault();
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -30,27 +45,30 @@ export default function Project() {
         current={project?.title}
         imageURL={project?.images[0]}
       />
-      <section className="container">
+      <section className="container-fluid">
         <h1 className="title text-gradient text-center py-100 m-0">
           معرض التصاميم
         </h1>
         <section>
-          <div ref={reveal} class="row g-4">
+          <div ref={reveal} className="gallery-container">
             {project?.images.map((image, index) => {
               return (
-                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0" key={index}>
-                  <div
-                    class="bg-image hover-overlay ripple shadow-1-strong rounded"
-                    data-ripple-color="light"
-                  >
-                    <img src={image} alt={project.title} class="w-100" />
+                <div key={index} className="gallery-item">
+                  <div className="bg-image hover-overlay ripple shadow-1-strong rounded">
+                    <img
+                      src={image}
+                      alt={project.title}
+                      width={750}
+                      height={500}
+                      className="w-100 h-100"
+                    />
                     <a
                       href="#!"
                       data-mdb-toggle="modal"
                       data-mdb-target={`#Modal${index}`}
                       className="magnify"
                     >
-                      <div class="mask"></div>
+                      <div className="mask"></div>
                     </a>
                   </div>
                 </div>
