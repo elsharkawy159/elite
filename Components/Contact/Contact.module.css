@@ -12,7 +12,7 @@
   margin-bottom: 12px;
 }
 
-.contactIcon:hover {
+.item:hover .contactIcon {
   background-color: var(--main-color);
 }
 
@@ -32,6 +32,6 @@
     transition: all 0.3s ease;
 
 }
-.contactIcon:hover i {
+.item:hover .contactIcon i {
   color: white;
 }

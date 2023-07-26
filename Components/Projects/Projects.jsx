@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import style from "./Projects.module.css";
 import Image from "next/image.js";
 import Link from "next/link.js";
-import { interiorProjects } from "../../data/projects.js";
+import { interiorProjects, outroProjects } from "../../data/projects.js";
 
 export const Projects = () => {
   const reveal = React.useRef(null);
@@ -17,11 +16,12 @@ export const Projects = () => {
   }, []);
   return (
     <>
-      <section className="container-fluid position-relative py-100">
+      <section className="container position-relative py-100">
         <div className="mb-5">
-          <h1 className="title text-center text-gradient">مشاريعنـا</h1>
+          <h1 className="title text-center text-gradient">مشاريعنا</h1>
           <p className="text-center opacity-75">
-            نحن نقدم العديد من أنواع المشاريع
+            نقدم العديد من المشاريع في مختلف أنواع الإنشاءات و التصاميم الداخلية
+            و الخارجية كالتالي
           </p>
         </div>
         <ul
@@ -64,23 +64,28 @@ export const Projects = () => {
             aria-labelledby="ex1-tab-1"
           >
             <div className="row gy-3 justify-content-center">
-              {interiorProjects.map((project) => {
+              {interiorProjects.slice(0, 8).map((project) => {
                 return (
                   <div ref={reveal} className={`col-md-3`} key={project.id}>
                     <Link href={`projects/${project.id}`}>
-                      <div className={style.snip1295}>
+                      <div className={"snip1295"}>
                         <Image
                           src={project.images[0]}
                           alt={project.title}
-                          width={400}
-                          height={230}
+                          width={1200}
+                          height={630}
                           className="w-100 h-100"
                         />
-                        <h1>{project.title}</h1>
-                        <div className={`${style.border} ${style.one}`}>
+                        <div className={"title"}>
+                          <p className="m-0">{project.title}</p>
+                          <p className="m-0">
+                            الملفات: {project.images.length}
+                          </p>
+                        </div>
+                        <div className={`border one`}>
                           <div></div>
                         </div>
-                        <div className={`${style.border} ${style.two}`}>
+                        <div className={`border two`}>
                           <div></div>
                         </div>
                       </div>
@@ -89,11 +94,6 @@ export const Projects = () => {
                 );
               })}
             </div>
-            <Link href={"/projects"} ref={reveal}>
-              <button className="btn btn-warning d-flex justify-content-center mx-auto mt-5">
-                المزيد
-              </button>
-            </Link>
           </div>
           <div
             className="tab-pane fade"
@@ -101,18 +101,44 @@ export const Projects = () => {
             role="tabpanel"
             aria-labelledby="ex1-tab-2"
           >
-            <div className="col-md-4">
-              <Image
-                src={"/test.jpg"}
-                alt="test"
-                width={415}
-                height={275}
-                className="rounded w-100 h-100"
-              />
+            <div className="row gy-3 justify-content-center">
+              {outroProjects.slice(0, 8).map((project) => {
+                return (
+                  <div ref={reveal} className={`col-md-3`} key={project.id}>
+                    <Link href={`projects/${project.id}`}>
+                      <div className={"snip1295"}>
+                        <Image
+                          src={project.images[0]}
+                          alt={project.title}
+                          width={400}
+                          height={230}
+                          className="w-100 h-100"
+                        />
+                        <div className={"title"}>
+                          <p className="m-0">{project.title}</p>
+                          <p className="m-0">
+                            الملفات: {project.images.length}
+                          </p>
+                        </div>
+                        <div className={`border one`}>
+                          <div></div>
+                        </div>
+                        <div className={`border two`}>
+                          <div></div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
-        {/* <div className="dark_overlay"></div> */}
+        <Link href={"/projects"} ref={reveal}>
+          <button className="btn btn-warning d-flex justify-content-center mx-auto mt-5">
+            المزيد
+          </button>
+        </Link>
       </section>
     </>
   );

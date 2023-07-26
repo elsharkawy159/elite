@@ -259,6 +259,7 @@ a:hover {
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   border-color: var(--main-color) !important;
+  color: var(--main-color) !important;
 }
 
 .btn {
@@ -295,6 +296,7 @@ a:hover {
 
 
 /* Projects */
+
 .snip1295 {
   position: relative;
   overflow: hidden;
@@ -318,6 +320,28 @@ a:hover {
   position: absolute;
   opacity: 0.45;
 }
+.snip1295 .title {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  width: calc(100% - 60px);
+  transform: translate(-50%, 0%);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2.5px);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.snip1295 .title p {
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 12px;
+  padding: 0px 10px;
+}
+
 .snip1295 .border:before,
 .snip1295 .border:after,
 .snip1295 .border div:before,

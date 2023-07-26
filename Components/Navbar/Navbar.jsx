@@ -44,7 +44,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto mt-0 mb-lg-0">
               <NavItem href="/about" text="من نحن" classes={liClasses} />
               <NavItem href="/services" text="الخدمـات" classes={liClasses} />
-              <NavItem href="/projects" text="أعمالنـا" classes={liClasses} />
+              <NavItem href="/projects" text="مشاريعنا" classes={liClasses} />
               <NavItem href="/contact" text="تواصل معنا" classes={liClasses} />
             </ul>
           </div>
@@ -61,5 +61,6 @@ const NavItem = ({ href, text, classes }) => (
     </Link>
   </li>
 );
+
 
 export default Navbar;

@@ -24,8 +24,8 @@ function projects() {
   return (
     <>
       <Banner
-        title={"أعمالنـا"}
-        description={"لدينا العديد من الأعمال السابقة التي تشبه فكرتك"}
+        title={"مشاريعنا"}
+        description={"نقدم العديد من المشاريع في مختلف أنواع الإنشاءات و التصاميم الداخلية و الخارجية"}
         prev={"الرئيسية"}
         current={"أعمالنا"}
       />
@@ -33,20 +33,24 @@ function projects() {
         <div ref={reveal} className="row gy-3 justify-content-center">
           {interiorProjects.map((project) => {
             return (
-              <div className={`col-md-4`} key={project?.id}>
-                <Link href={`projects/${project?.id}`}>
+              <div ref={reveal} className={`col-md-3`} key={project.id}>
+                <Link href={`projects/${project.id}`}>
                   <div className={"snip1295"}>
                     <Image
-                      src={project?.images[0]}
-                      alt={project?.title}
-                      width={400}
-                      height={230}
+                      src={project.images[0]}
+                      alt={project.title}
+                      width={1200}
+                      height={630}
                       className="w-100 h-100"
                     />
-                    <div className={"border one"}>
+                    <div className={"title"}>
+                      <p className="m-0">{project.title}</p>
+                      <p className="m-0">الملفات: {project.images.length}</p>
+                    </div>
+                    <div className={`border one`}>
                       <div></div>
                     </div>
-                    <div className={"border two"}>
+                    <div className={`border two`}>
                       <div></div>
                     </div>
                   </div>
@@ -56,20 +60,24 @@ function projects() {
           })}
           {outroProjects.map((project) => {
             return (
-              <div className={`col-md-4`} key={project?.id}>
-                <Link href={`projects/${project?.id}`}>
+              <div ref={reveal} className={`col-md-3`} key={project.id}>
+                <Link href={`projects/${project.id}`}>
                   <div className={"snip1295"}>
                     <Image
-                      src={project?.images[0]}
-                      alt={project?.title}
-                      width={400}
-                      height={230}
+                      src={project.images[0]}
+                      alt={project.title}
+                      width={1200}
+                      height={630}
                       className="w-100 h-100"
                     />
-                    <div className={"border one"}>
+                    <div className={"title"}>
+                      <p className="m-0">{project.title}</p>
+                      <p className="m-0">الملفات: {project.images.length}</p>
+                    </div>
+                    <div className={`border one`}>
                       <div></div>
                     </div>
-                    <div className={"border two"}>
+                    <div className={`border two`}>
                       <div></div>
                     </div>
                   </div>

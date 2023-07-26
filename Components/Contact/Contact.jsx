@@ -1,43 +1,54 @@
 import React from "react";
 import style from "./Contact.module.css";
 import Link from "next/link.js";
+import contactData from "../../data/contact.js";
 
 export const Contact = () => {
   return (
     <>
       <section className="container py-100">
         <div className="row my-5">
-          <div className="col-md-3 d-flex flex-column align-items-center">
+          <div className={`${style.item} col-md-3 d-flex flex-column align-items-center`}>
             <div className={style.contactIcon}>
               <i className={`fa-solid fa-location-dot`}></i>
             </div>
-            <Link href={"/"} className="h5 hover text-center">
-              حفر الباطن - حي البلدية - شارع قتيبة بن مسلم
+            <Link
+              href={
+                "https://www.google.com/maps?ll=28.429219,45.976045&z=20&t=m&hl=en&gl=EG&mapclient=embed&cid=4876996940470737704"
+              }
+              className="h5 hover text-center"
+              target="_blank"
+            >
+              {contactData.address}
             </Link>
           </div>
-          <div className="col-md-3 d-flex flex-column align-items-center">
+          <div className={`${style.item} col-md-3 d-flex flex-column align-items-center`}>
             <div className={style.contactIcon}>
               <i className={`fas fa-phone`}></i>
             </div>
-            <Link href={"/"} className="h5 hover phone">
-              055 246 2856
+            <Link
+              href={`https://wa.me/${contactData.whatsapp}`}
+              className="h5 hover phone"
+              target="_blank"
+            >
+              {contactData.mobile1}
               <br />
-              050 902 7773
+              {contactData.mobile2}
             </Link>
           </div>
-          <div className="col-md-3 d-flex flex-column align-items-center">
+          <div className={`${style.item} col-md-3 d-flex flex-column align-items-center`}>
             <div className={style.contactIcon}>
               <i className={`fa-solid fa-envelope`}></i>
             </div>
-            <Link href={"/"} className="h5 hover">
-              info@elite-sa.com
+            <Link href={`mailto:${contactData.email}`} className="h5 hover">
+              {contactData.email}
             </Link>
           </div>
-          <div className="col-md-3 d-flex flex-column align-items-center">
+          <div className={`${style.item} col-md-3 d-flex flex-column align-items-center`}>
             <div className={style.contactIcon}>
               <i className={`fa-regular fa-clock`}></i>
             </div>
-            <Link href={"/"} className="h5 hover">
+            <Link href={""} className="h5 hover">
               24/7
             </Link>
           </div>

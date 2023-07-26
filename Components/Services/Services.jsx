@@ -22,28 +22,20 @@ const ServiceItem = ({ icon, title, image }) => {
   }, []);
 
   return (
-    <div ref={reveal} className={`col-lg-3 col-md-4 col-sm-6`}>
+    <div ref={reveal} className={`col-lg-4 col-md-6 col-12`}>
       <Link href={`/services/#${title}`}>
         <div className={`${style.service} card hvrShadow`}>
           <Image
             src={image}
             className="card-img-top w-100"
             alt={title}
-            width={280}
-            height={230}
+            width={1200}
+            height={260}
           />
           <div className="card-body">
             <p className="card-text text-center fw-bold h5">{title}</p>
           </div>
         </div>
-        {/* <div
-          className={`${style.service} py-4 d-flex flex-column justify-content-center align-items-center`}
-        >
-          <div>
-            <i className={`${icon} ${style.icon} title mb-3`}></i>
-          </div>
-          <h2 className="h4 fw-semibold">{title}</h2>
-        </div> */}
       </Link>
     </div>
   );
@@ -56,7 +48,11 @@ export const Services = () => {
         <div className="container">
           <div className="row gy-5 justify-content-center">
             <h1 className="headline text-center text-gradient title mb-4">
-              خدماتنـا
+              خدمـاتنا
+              <p className="fw-light fs-6">
+                نقدم العديد من الخدمات ذات الصله الإنشاءات و المقاولات و أهمهم
+                التالي
+              </p>
             </h1>
             {serviceData.slice(0, 3).map((service, index) => (
               <ServiceItem

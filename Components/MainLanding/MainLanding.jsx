@@ -35,7 +35,7 @@ export const MainLanding = () => {
                       وغيرها من الخدمات ذات الصلة.
                     </p>
                   </div>
-                  <Link href={"/"}>
+                  <Link href={"/contact"}>
                     <button
                       type="button"
                       className="btn btn-outline-warning fs-6 fw-bold my-2 rounded-0"

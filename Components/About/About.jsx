@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import style from "./About.module.css";
 import Link from "next/link.js";
+import Image from "next/image.js";
 
 export const About = () => {
   const reveal = React.useRef(null);
@@ -30,7 +31,7 @@ export const About = () => {
               شـركات عالميـة ومحليـة. وخـلال وقـت قصير أصبحنا من أفضـل المكاتب
               الناشـئة بفضل اللـه ثـم ثقة عملائنا.
             </p>
-            <Link href={"/"}>
+            <Link href={"/about"}>
               <button
                 type="button"
                 className="btn btn-outline-warning fs-6 fw-bold my-4 rounded-0"
@@ -40,7 +41,7 @@ export const About = () => {
             </Link>
           </div>
           <div className="col-md-6 position-relative img_border">
-            <img src="/test.jpg" className="w-100" alt="" />
+            <Image src="/about.jpg" width={1280} height={720} className="w-100 h-100" alt="" />
           </div>
         </div>
       </section>

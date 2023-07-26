@@ -22,7 +22,7 @@ export default function contact() {
     <>
       <Banner
         title={"تواصـل معنـا"}
-        description={"يمكنك التواصل معنا في أي وقت"}
+        description={"تواصل معنا الأن لمناقشة مشروعك أو الرد على إستفساراتك"}
         prev={"الرئيسيىة"}
         current={"تواصل معنا"}
       />
