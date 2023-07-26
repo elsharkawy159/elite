@@ -5,8 +5,6 @@ import "../styles/globals.css";
 import "../styles/mediaQuery.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "mdb-ui-kit/css/mdb.min.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Layout from "../Layout/Layout.js";
 
 export default function MyApp({ Component, pageProps }) {
