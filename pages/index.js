@@ -22,7 +22,7 @@ export default function Home() {
       <About />
       <Services />
       <Projects />
-      <VideoBanner/>
+      <VideoBanner />
       <Map />
     </>
   );
